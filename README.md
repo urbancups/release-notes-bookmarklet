@@ -30,5 +30,4 @@ The source code for the bookmarklet is available [here](release-notes-bookmarkle
 
 ## Contribute
 
-The source code for this bookmarklet can be found [here](release-notes-bookmarklet.js).
 Please feel free to open pull requests with bugfixes or improvements for this tool.
