@@ -15,8 +15,8 @@
   function createRelease() {
     var issues = Array.prototype.slice.call(document.querySelectorAll('li.js-issue-row')).map(e => ({
       id: e.id.substr('issue_'.length),
-      text: e.querySelector('.Box-row-link').innerText,
-      href: e.querySelector('.Box-row-link').href,
+      text: e.querySelector('.link-gray-dark').innerText,
+      href: e.querySelector('.link-gray-dark').href,
       type: Array.prototype.slice.call(e.querySelectorAll('.labels a')).filter(l => l.innerText.indexOf(filterPrefix) === 0).map(l => l.innerText.substr(filterPrefix.length))[0]
     }));
 
@@ -45,6 +45,7 @@
     copyToClipboard(releaseText);
     alert('Release created with success.\n\nThe following content was written to console and copied to your clipboard.\n\n---------------------------------------\n\n' + releaseText)
   } catch (err) {
+    console.error(err);
     alert("Error creating release: ", err);
   }
 })('type:');
