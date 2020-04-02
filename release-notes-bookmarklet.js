@@ -13,7 +13,7 @@
   };
 
   function createRelease() {
-    var issues = Array.prototype.slice.call(document.querySelectorAll('li.js-issue-row')).map(e => ({
+    var issues = Array.prototype.slice.call(document.querySelectorAll('.js-issue-row')).map(e => ({
       id: e.id.substr('issue_'.length),
       text: e.querySelector('.link-gray-dark').innerText,
       href: e.querySelector('.link-gray-dark').href,
